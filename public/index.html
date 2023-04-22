@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welcome to Firebase Hosting</title>
+  <title>Olivier Donard, académicien</title>
 
   <!-- update the version number as needed -->
-  <script defer src="/__/firebase/9.20.0/firebase-app-compat.js"></script>
+  <!-- <script defer src="/__/firebase/9.20.0/firebase-app-compat.js"></script> -->
   <!-- include only the Firebase features as you need -->
-  <script defer src="/__/firebase/9.20.0/firebase-auth-compat.js"></script>
+  <!-- <script defer src="/__/firebase/9.20.0/firebase-auth-compat.js"></script>
   <script defer src="/__/firebase/9.20.0/firebase-database-compat.js"></script>
   <script defer src="/__/firebase/9.20.0/firebase-firestore-compat.js"></script>
   <script defer src="/__/firebase/9.20.0/firebase-functions-compat.js"></script>
@@ -17,17 +17,18 @@
   <script defer src="/__/firebase/9.20.0/firebase-storage-compat.js"></script>
   <script defer src="/__/firebase/9.20.0/firebase-analytics-compat.js"></script>
   <script defer src="/__/firebase/9.20.0/firebase-remote-config-compat.js"></script>
-  <script defer src="/__/firebase/9.20.0/firebase-performance-compat.js"></script>
+  <script defer src="/__/firebase/9.20.0/firebase-performance-compat.js"></script> -->
   <!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
-  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  <!-- <script defer src="/__/firebase/init.js?useEmulator=true"></script> -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;600&display=swap" rel="stylesheet">
   <link href="donard.css" rel="stylesheet">
+  <script defer src="js/init.js"></script>
 
 </head>
 
@@ -77,18 +78,53 @@
     </section>
     <section id="img">
       <article>
-
+        <h2>Votre paticipation</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet ante vel tellus ornare sollicitudin.
+          Morbi fermentum luctus ex, id rhoncus tortor vestibulum vitae. Aenean gravida lacinia tellus a laoreet. Etiam
+          sed ipsum eleifend, porttitor eros in, pretium dolor. Nulla dapibus, enim quis sollicitudin posuere, turpis
+          purus suscipit mi, in convallis felis ex sed eros. Sed pretium eleifend maximus. Ut vel odio ut libero
+          faucibus ullamcorper. Praesent mattis risus non tortor tristique, non ullamcorper magna lobortis. Quisque
+          vehicula tincidunt nisl quis aliquet. Nunc molestie nunc pulvinar fermentum mattis. Donec lacus diam,
+          convallis nec facilisis dignissim, consequat in enim.</p>
       </article>
       <article>
-
+        <div>
+          <figure style="background-image: url('images/epee_1_vignette.png');" onclick="setLightbox('images/epee_1.png')"></figure>
+          <figure style="background-image: url('images/epee_2_vignette.png');" onclick="setLightbox('images/epee_2.png')"></figure>
+          <figure style="background-image: url('images/epee_3_vignette.png');" onclick="setLightbox('images/epee_3.png')"></figure>
+          <figure style="background-image: url('images/epee_4_vignette.png');" onclick="setLightbox('images/epee_4.png')"></figure>
+          <figure style="background-image: url('images/epee_5_vignette.png');" onclick="setLightbox('images/epee_5.png')"></figure>
+          <figure style="background-image: url('images/epee_6_vignette.png');" onclick="setLightbox('images/epee_6.png')"></figure>
+          <figure style="background-image: url('images/epee_7_vignette.png');" onclick="setLightbox('images/epee_7.png')"></figure>
+          <figure style="background-image: url('images/epee_8_vignette.png');" onclick="setLightbox('images/epee_8.png')"></figure>
+          <figure style="background-image: url('images/epee_9_vignette.png');" onclick="setLightbox('images/epee_9.png')"></figure>
+        </div>
+        <div>
+          <figure style="background-image: url('images/Costume Academicien_2.jpg');"></figure>
+        </div>
       </article>
-      <article class="vert">
-
+      <article class="bleu">
+        <div>
+          <h1>L'épée</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet ante vel tellus ornare sollicitudin. Morbi fermentum luctus ex, id rhoncus tortor vestibulum vitae. Aenean gravida lacinia tellus a laoreet. Etiam sed ipsum eleifend, porttitor eros in, pretium dolor. Nulla dapibus, enim quis sollicitudin posuere, turpis purus suscipit mi, in convallis felis ex sed eros. Sed pretium eleifend</p>
+        </div>
+        <div>
+          <h1>Le costume</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet ante vel tellus ornare sollicitudin. Morbi fermentum luctus ex, id rhoncus tortor vestibulum vitae. Aenean gravida lacinia tellus a laoreet. Etiam sed ipsum eleifend, porttitor eros in, pretium dolor. Nulla dapibus, enim quis sollic</p>
+        </div>
       </article>
+
     </section>
+    <footer>
+      <a href="https://exlineo.com" title="Réalisaton, exlineo">Réalisation, exlineo</a>
+    </footer>
   </main>
+  <section id="lightbox">
+    <a class="croix"></a>
+    <article></article>
+  </section>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    /* document.addEventListener('DOMContentLoaded', function () {
       const loadEl = document.querySelector('#load');
       // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
       // // The Firebase SDK is initialized and available here!
@@ -123,7 +159,7 @@
         console.error(e);
         loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
       }
-    });
+    });*/
   </script>
 </body>
 

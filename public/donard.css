@@ -15,6 +15,7 @@ body {
     font-family: 'Raleway', sans-serif;
     display: flex;
     font-size: 14px;
+    overflow-x: hidden;
 }
 
 main {
@@ -29,8 +30,30 @@ main {
 
 h1 {
     font-weight: 100;
+    font-size: 48px;
 }
-
+a{
+    text-decoration: none;
+    opacity: .7;
+    transition: all .3s ease;
+}
+a:hover{
+    opacity: 1;
+}
+main>footer{
+    background-color: var(--vert);
+    color: var(--clair);
+    height:60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding:0;
+    margin:0;
+}
+main > footer > a {
+    color:var(--clair);
+}
 main>section {
     width: 100%;
     display: flex;
@@ -67,7 +90,6 @@ header>div {
 }
 
 header h1 {
-    font-size: 48px;
     font-weight: 100;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -84,7 +106,6 @@ main>section:nth-child(1)>article:nth-child(1) {
     align-items: flex-end;
     justify-content: flex-end;
 }
-
 main>section:nth-child(1)>article:nth-child(2) > p {
     padding-left: 50px;
 }
@@ -95,7 +116,86 @@ main>section:nth-child(1)>article:nth-child(2) > div {
 main>section:nth-child(1)>article:nth-child(3) {
     background: url('images/olivier-donard_academicien.jpg') 0% 0% no-repeat;
 }
+/* SECTION DU BAS */
+main>section:nth-child(2)>article:nth-child(1) {
+}
 
+main>section:nth-child(2)>article:nth-child(1) > p {
+    padding-left:30px;
+}
+main>section:nth-child(2)>article:nth-child(2) {
+    display:flex;
+    flex-flow: column nowrap;
+    padding:0;
+    align-content: flex-start;
+}
+main>section:nth-child(2)>article:nth-child(2) > div {
+    width:100%;
+    display:flex;
+    flex-flow: row wrap;
+    padding:0;
+    align-content: flex-start;
+}
+main>section:nth-child(2)>article:nth-child(2) > div:nth-child(1) figure {
+    width:calc(100% / 3);
+    height:150px;
+}
+main>section:nth-child(2)>article:nth-child(2) > div:nth-child(2) figure {
+    width:100%;
+    height:350px;
+}
+main>section:nth-child(2)>article:nth-child(2) > div figure:hover:before {
+    content:'+';
+    font-size:72px;
+    margin:auto;
+    font-weight: 100;
+}
+main>section:nth-child(2)>article:nth-child(2) > a {
+    padding:0;
+    margin:0;
+}
+main>section:nth-child(2)>article:nth-child(3) {
+}
+main>section:nth-child(2)>article:nth-child(3) p {
+    padding-left:30px;
+}
+/* DIVERS */
+figure{
+    display:flex;
+    padding:0;
+    margin:0;
+    transition: all .3s ease;
+    background-size: cover;
+    cursor: pointer;
+}
+figure:hover{
+    transform: scale(1.1);
+}
+figure:hover:before{
+}
+#lightbox {
+    position:absolute;
+    left:0;
+    top:0;
+    width: 100vw;
+    height:100vh;
+    background-color: rgba(0,0,0,.666);
+    display:none;
+}
+#lightbox > article {
+    margin:auto;
+    padding:10%;
+    width:90vw;
+    height:90vh;
+}
+#lightbox > article > figure {
+    width:100%;
+    height:100%;
+    background-size: cover;
+}
+.affiche{
+    display:flex !important;
+}
 button {
     background-color: var(--jaune);
     padding: 10px 15px;
