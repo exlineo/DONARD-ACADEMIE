@@ -1,0 +1,7 @@
+{
+  "name": "donard-academi",
+  "version": "0.8.0",
+  "dependencies": {
+    "firebase": "^9.20.0"
+  }
+}
