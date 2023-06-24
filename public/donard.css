@@ -14,7 +14,7 @@ body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
     display: flex;
-    font-size: 14px;
+    font-size: 16px;
     overflow-x: hidden;
 }
 
@@ -32,28 +32,34 @@ h1 {
     font-weight: 100;
     font-size: 48px;
 }
-a{
+
+a {
     text-decoration: none;
     opacity: .7;
     transition: all .3s ease;
+    color: var(--clair);
 }
-a:hover{
+
+a:hover {
     opacity: 1;
 }
-main>footer{
+
+main>footer {
     background-color: var(--vert);
     color: var(--clair);
-    height:60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
-main > footer > a {
-    color:var(--clair);
+
+main>footer>a {
+    color: var(--clair);
 }
+
 main>section {
     width: 100%;
     display: flex;
@@ -101,120 +107,231 @@ header h2 {
     text-align: right;
 }
 
+ul>ul>li {
+    list-style: circle;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
 /* PERSONNALISATION DES ARTICLES */
 main>section:nth-child(1)>article:nth-child(1) {
     align-items: flex-end;
     justify-content: flex-end;
 }
-main>section:nth-child(1)>article:nth-child(2) > p {
+
+main>section:nth-child(1)>article:nth-child(2)>p {
     padding-left: 50px;
 }
-main>section:nth-child(1)>article:nth-child(2) > div {
-    width:50%;
+
+main>section:nth-child(1)>article:nth-child(2)>div {
+    width: 50%;
     align-self: flex-end;
 }
+
 main>section:nth-child(1)>article:nth-child(3) {
-    background: url('images/olivier-donard_academicien.jpg') 0% 0% no-repeat;
-}
-/* SECTION DU BAS */
-main>section:nth-child(2)>article:nth-child(1) {
+    background: url('images/Olivier_academie.jpg') 0% 0% no-repeat;
+    background-size: cover;
 }
 
-main>section:nth-child(2)>article:nth-child(1) > p {
-    padding-left:30px;
+/* SECTION DU MILIEU */
+#sous {
+    flex-direction: column;
+    padding: 0 20px;
+    background-color: var(--jaune);
+    min-height: auto;
+    overflow-x: auto;
 }
-main>section:nth-child(2)>article:nth-child(2) {
-    display:flex;
+
+#sous h1,
+#sous h2 {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+#sous a {
+    color: var(--sombre);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr {
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+
+table td {
+    width: 25%;
+    padding: 10px 15px;
+}
+
+table>tbody>tr>td:nth-child(1) {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+table>tbody>tr:nth-child(3)>td:nth-child(3) {
+    /* text-align:center; */
+}
+
+table>tbody>tr>td:nth-child(2),
+table>tbody>tr>td:nth-child(4) {
+    width: 15px;
+}
+
+table>tbody>tr>td:nth-child(5) {
+    width: calc(40% - 30px);
+}
+
+/* SECTION DU BAS */
+#img>article:nth-child(1) {}
+
+#img>article:nth-child(1)>p {
+    padding-left: 30px;
+}
+
+#img>article:nth-child(2) {
+    display: flex;
     flex-flow: column nowrap;
-    padding:0;
+    padding: 0;
     align-content: flex-start;
 }
-main>section:nth-child(2)>article:nth-child(2) > div {
-    width:100%;
-    display:flex;
+
+#img>article:nth-child(2)>div {
+    width: 100%;
+    display: flex;
     flex-flow: row wrap;
-    padding:0;
+    padding: 0;
     align-content: flex-start;
 }
-main>section:nth-child(2)>article:nth-child(2) > div:nth-child(1) figure {
-    width:calc(100% / 3);
-    height:150px;
+
+#img>article:nth-child(2)>div:nth-child(1) figure {
+    width: calc(100% / 3);
+    height: 150px;
 }
-main>section:nth-child(2)>article:nth-child(2) > div:nth-child(2) figure {
-    width:100%;
-    height:350px;
+
+#img>article:nth-child(2)>div:nth-child(2) figure {
+    width: 100%;
+    height: 350px;
 }
-main>section:nth-child(2)>article:nth-child(2) > div figure:hover:before {
-    content:'+';
-    font-size:72px;
-    margin:auto;
+
+#img>article:nth-child(2)>div figure:hover:before {
+    content: '+';
+    font-size: 72px;
+    margin: auto;
     font-weight: 100;
 }
-main>section:nth-child(2)>article:nth-child(2) > a {
-    padding:0;
-    margin:0;
+
+#img>article:nth-child(2)>a {
+    padding: 0;
+    margin: 0;
 }
-main>section:nth-child(2)>article:nth-child(3) {
+
+#img>article:nth-child(3) {}
+
+#img>article:nth-child(3) p {
+    padding-left: 30px;
 }
-main>section:nth-child(2)>article:nth-child(3) p {
-    padding-left:30px;
-}
+
 /* DIVERS */
-figure{
-    display:flex;
-    padding:0;
-    margin:0;
+figure {
+    display: flex;
+    padding: 0;
+    margin: 0;
     transition: all .3s ease;
     background-size: cover;
     cursor: pointer;
 }
-figure:hover{
+
+figure:hover {
     transform: scale(1.1);
 }
-figure:hover:before{
-}
-#lightbox {
-    position:absolute;
-    left:0;
-    top:0;
+
+figure:hover:before {}
+
+.lightbox {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100vw;
-    height:100vh;
-    background-color: rgba(0,0,0,.666);
-    display:none;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .666);
+    display: none;
 }
-#lightbox > article {
-    margin:auto;
-    padding:10%;
-    width:90vw;
-    height:90vh;
+.lightbox h1{
+    margin:10px;
 }
-#lightbox > article > figure {
-    width:100%;
-    height:100%;
+.lightbox>article {
+    margin: auto;
+    padding: 10%;
+    width: 90vw;
+    height: 90vh;
+    background-color: var(--clair);
+}
+
+.lightbox>article>figure {
+    width: 100%;
+    height: 100%;
     background-size: cover;
 }
-.affiche{
-    display:flex !important;
+
+.affiche {
+    display: flex !important;
 }
-button {
+
+button,
+.bouton {
     background-color: var(--jaune);
     padding: 10px 15px;
-    margin-top:20px;
+    margin-top: 18px;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     cursor: pointer;
-    font-size:21px;
     font-weight: 600;
-    width:220px;
+    width: max-content;
     font-family: 'Raleway', sans-serif;
     transition: all .3s ease;
+    border: none;
 }
-button:hover{
-    margin-top:15px;
-    padding:15px;
-    width: 240px;
+
+.bouton {
+    background-color: var(--clair);
+    margin: auto 20px;
+    font-size: 21px;
 }
+
+button>*,
+.bouton>* {
+    margin-right: 15px;
+}
+
+button:hover {
+    margin-top: 15px;
+    padding: 15px;
+}
+
+.bouton:hover {
+    transform: scale(1.1);
+}
+
+#financer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around
+}
+
+#financer>* {
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
 /* CLASSES PESONNALISEES */
 .bleu {
     background-color: var(--bleu);
@@ -235,40 +352,99 @@ button:hover{
     opacity: 0.5;
     max-width: 30vw;
     align-self: flex-start;
+    transform:rotate(-60deg);
+    margin-left:-100px;
 }
-.colonne{
+
+.colonne {
     columns: 2;
 }
 
-@media screen and (max-width:980px) {
-    main {
-        width: 100vw;
-    }
-
-    main>section {
-        flex-flow: column nowrap;
-    }
-
-    main>section>article {
-        width: 100vw !important;
-    }
-
-    /* PERSONNALISATION DES ARTICLES */
-    main>section:nth-child(1)>article:nth-child(1), main>section:nth-child(1)>article:nth-child(1) > div {
-        display:flex;
-        flex-flow:row nowrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    main>section:nth-child(1)>article:nth-child(2) p {
-        padding-left: 50px;
-    }
-
-    main>section:nth-child(1)>article:nth-child(3) {
-        background: url('images/olivier-donard_academicien.jpg') 50% 0% no-repeat;
-    }
-    .colonne{
-        columns: 1;
-    }
+br {
+    line-height: 32px;
 }
+
+.close {
+    position: absolute;
+    right: 32px;
+    top: 16px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    z-index: 1002;
+}
+
+.close:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+.close:before,
+.close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: var(--clair);
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: var(--bleu);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: var(--bleu);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--jaune);
+}
+
+
+    @media screen and (max-width:980px) {
+        main {
+            width: 100vw;
+        }
+
+        main>section {
+            flex-flow: column nowrap;
+        }
+
+        main>section>article {
+            width: 100vw !important;
+        }
+
+        /* PERSONNALISATION DES ARTICLES */
+        main>section:nth-child(1)>article:nth-child(1),
+        main>section:nth-child(1)>article:nth-child(1)>div {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        main>section:nth-child(1)>article:nth-child(2) p {
+            padding-left: 50px;
+        }
+        main>section:nth-child(1)>article:nth-child(3) {
+            /* background: url('images/Olivier_academie.jpg') 0% 0% no-repeat;
+            background-size: cover; */
+            height:350px;
+        }
+
+        .colonne {
+            columns: 1;
+        }
+        .logo{width:100%;}
+    }

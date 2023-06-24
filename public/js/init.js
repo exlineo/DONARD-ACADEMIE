@@ -32,3 +32,9 @@ const setLightbox = (url) => {
 
   lightbox.classList.add('affiche');
 }
+
+const infos = document.getElementById('infos');
+infos.addEventListener('click', ()=> infos.classList.remove('affiche'));
+const setInfos = () => {
+  infos.classList.add('affiche');
+}
